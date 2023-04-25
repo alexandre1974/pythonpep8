@@ -1,0 +1,250 @@
+def __top_level__():
+    r0, r1 :: object
+    r2 :: bit
+    r3 :: str
+    r4 :: object
+    r5 :: dict
+    r6 :: str
+    r7 :: list
+    r8, r9 :: ptr
+    r10 :: str
+    r11 :: object
+    r12, r13, r14 :: str
+    r15 :: object
+    r16 :: str
+    r17 :: int32
+    r18 :: bit
+    r19 :: dict
+    r20 :: str
+    r21 :: list
+    r22, r23 :: ptr
+    r24 :: str
+    r25 :: object
+    r26, r27, r28 :: str
+    r29 :: object
+    r30 :: str
+    r31 :: int32
+    r32 :: bit
+    r33 :: dict
+    r34 :: str
+    r35, r36 :: object
+    r37 :: dict
+    r38 :: str
+    r39 :: int32
+    r40 :: bit
+    r41 :: dict
+    r42 :: str
+    r43 :: object
+    r44 :: str
+    r45 :: object
+    r46 :: dict
+    r47 :: str
+    r48 :: object
+    r49 :: str
+    r50 :: object
+    r51 :: dict
+    r52 :: str
+    r53 :: object
+    r54 :: str
+    r55, r56 :: object
+    r57 :: str
+    r58 :: object
+    r59 :: str
+    r60 :: object
+    r61 :: object[1]
+    r62 :: object_ptr
+    r63 :: object
+    r64 :: dict
+    r65 :: str
+    r66 :: object
+    r67, r68, r69 :: str
+    r70, r71 :: object
+    r72 :: dict
+    r73 :: object
+    r74 :: str
+    r75 :: object
+    r76 :: object[1]
+    r77 :: object_ptr
+    r78 :: object
+    r79 :: None
+L0:
+    r0 = builtins :: module
+    r1 = load_address _Py_NoneStruct
+    r2 = r0 != r1
+    if r2 goto L3 else goto L1 :: bool
+L1:
+    r3 = 'builtins'
+    r4 = PyImport_Import(r3)
+    if is_error(r4) goto L29 (error at <module>:-1) else goto L2
+L2:
+    builtins = r4 :: module
+    dec_ref r4
+L3:
+    r5 = main.globals :: static
+    r6 = 'filanormal'
+    r7 = PyList_New(1)
+    if is_error(r7) goto L29 (error at <module>:1) else goto L4
+L4:
+    r8 = get_element_ptr r7 ob_item :: PyListObject
+    r9 = load_mem r8 :: ptr*
+    inc_ref r6
+    set_mem r9, r6 :: builtins.object*
+    r10 = 'fila_normal'
+    r11 = PyImport_ImportModuleLevelObject(r10, r5, 0, r7, 0)
+    dec_ref r7
+    if is_error(r11) goto L29 (error at <module>:1) else goto L5
+L5:
+    fila_normal = r11 :: module
+    r12 = 'fila_normal'
+    r13 = 'filanormal'
+    r14 = 'filanormal'
+    r15 = CPyImport_ImportFrom(r11, r12, r13, r14)
+    dec_ref r11
+    if is_error(r15) goto L29 (error at <module>:1) else goto L6
+L6:
+    r16 = 'filanormal'
+    r17 = CPyDict_SetItem(r5, r16, r15)
+    dec_ref r15
+    r18 = r17 >= 0 :: signed
+    if not r18 goto L29 (error at <module>:1) else goto L7 :: bool
+L7:
+    r19 = main.globals :: static
+    r20 = 'FilaPrioritaria'
+    r21 = PyList_New(1)
+    if is_error(r21) goto L29 (error at <module>:2) else goto L8
+L8:
+    r22 = get_element_ptr r21 ob_item :: PyListObject
+    r23 = load_mem r22 :: ptr*
+    inc_ref r20
+    set_mem r23, r20 :: builtins.object*
+    r24 = 'fila_prioritaria'
+    r25 = PyImport_ImportModuleLevelObject(r24, r19, 0, r21, 0)
+    dec_ref r21
+    if is_error(r25) goto L29 (error at <module>:2) else goto L9
+L9:
+    fila_prioritaria = r25 :: module
+    r26 = 'fila_prioritaria'
+    r27 = 'FilaPrioritaria'
+    r28 = 'FilaPrioritaria'
+    r29 = CPyImport_ImportFrom(r25, r26, r27, r28)
+    dec_ref r25
+    if is_error(r29) goto L29 (error at <module>:2) else goto L10
+L10:
+    r30 = 'FilaPrioritaria'
+    r31 = CPyDict_SetItem(r19, r30, r29)
+    dec_ref r29
+    r32 = r31 >= 0 :: signed
+    if not r32 goto L29 (error at <module>:2) else goto L11 :: bool
+L11:
+    r33 = main.globals :: static
+    r34 = 'FilaPrioritaria'
+    r35 = CPyDict_GetItem(r33, r34)
+    if is_error(r35) goto L29 (error at <module>:4) else goto L12
+L12:
+    r36 = _PyObject_Vectorcall(r35, 0, 0, 0)
+    dec_ref r35
+    if is_error(r36) goto L29 (error at <module>:4) else goto L13
+L13:
+    r37 = main.globals :: static
+    r38 = 'fila2_teste'
+    r39 = CPyDict_SetItem(r37, r38, r36)
+    dec_ref r36
+    r40 = r39 >= 0 :: signed
+    if not r40 goto L29 (error at <module>:4) else goto L14 :: bool
+L14:
+    r41 = main.globals :: static
+    r42 = 'fila2_teste'
+    r43 = CPyDict_GetItem(r41, r42)
+    if is_error(r43) goto L29 (error at <module>:5) else goto L15
+L15:
+    r44 = 'atualiza_fila'
+    r45 = CPyObject_CallMethodObjArgs(r43, r44, 0)
+    dec_ref r43
+    if is_error(r45) goto L29 (error at <module>:5) else goto L30
+L16:
+    r46 = main.globals :: static
+    r47 = 'fila2_teste'
+    r48 = CPyDict_GetItem(r46, r47)
+    if is_error(r48) goto L29 (error at <module>:6) else goto L17
+L17:
+    r49 = 'atualiza_fila'
+    r50 = CPyObject_CallMethodObjArgs(r48, r49, 0)
+    dec_ref r48
+    if is_error(r50) goto L29 (error at <module>:6) else goto L31
+L18:
+    r51 = main.globals :: static
+    r52 = 'fila2_teste'
+    r53 = CPyDict_GetItem(r51, r52)
+    if is_error(r53) goto L29 (error at <module>:7) else goto L19
+L19:
+    r54 = 'chama_cliente'
+    r55 = object 5
+    r56 = CPyObject_CallMethodObjArgs(r53, r54, r55, 0)
+    dec_ref r53
+    if is_error(r56) goto L29 (error at <module>:7) else goto L20
+L20:
+    r57 = cast(str, r56)
+    if is_error(r57) goto L29 (error at <module>:7) else goto L21
+L21:
+    r58 = builtins :: module
+    r59 = 'print'
+    r60 = CPyObject_GetAttr(r58, r59)
+    if is_error(r60) goto L32 (error at <module>:7) else goto L22
+L22:
+    r61 = [r57]
+    r62 = load_address r61
+    r63 = _PyObject_Vectorcall(r60, r62, 1, 0)
+    dec_ref r60
+    if is_error(r63) goto L32 (error at <module>:7) else goto L33
+L23:
+    dec_ref r57
+    r64 = main.globals :: static
+    r65 = 'fila2_teste'
+    r66 = CPyDict_GetItem(r64, r65)
+    if is_error(r66) goto L29 (error at <module>:8) else goto L24
+L24:
+    r67 = '11/12/2003'
+    r68 = 'detail'
+    r69 = 'estatistica'
+    r70 = object 322
+    r71 = CPyObject_CallMethodObjArgs(r66, r69, r67, r70, r68, 0)
+    dec_ref r66
+    if is_error(r71) goto L29 (error at <module>:8) else goto L25
+L25:
+    r72 = cast(dict, r71)
+    if is_error(r72) goto L29 (error at <module>:8) else goto L26
+L26:
+    r73 = builtins :: module
+    r74 = 'print'
+    r75 = CPyObject_GetAttr(r73, r74)
+    if is_error(r75) goto L34 (error at <module>:8) else goto L27
+L27:
+    r76 = [r72]
+    r77 = load_address r76
+    r78 = _PyObject_Vectorcall(r75, r77, 1, 0)
+    dec_ref r75
+    if is_error(r78) goto L34 (error at <module>:8) else goto L35
+L28:
+    dec_ref r72
+    return 1
+L29:
+    r79 = <error> :: None
+    return r79
+L30:
+    dec_ref r45
+    goto L16
+L31:
+    dec_ref r50
+    goto L18
+L32:
+    dec_ref r57
+    goto L29
+L33:
+    dec_ref r63
+    goto L23
+L34:
+    dec_ref r72
+    goto L29
+L35:
+    dec_ref r78
+    goto L28
