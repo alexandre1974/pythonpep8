@@ -1,18 +1,22 @@
-from fila_normal import filanormal
-from fila_prioritaria import FilaPrioritaria
+# from fila_normal import filanormal
+# from fila_prioritaria import FilaPrioritaria
+from fabrica_fila import Fabrica_Fila
+
+from estatistica_resumida import EstatisticaResumida
+from estatistica_detalhada import EstatisticaDetalhada
 
 # fila2_teste = FilaPrioritaria()
 # fila2_teste.atualiza_fila()
 # fila2_teste.atualiza_fila()
 # print(fila2_teste.chama_cliente(5))
 # print(fila2_teste.estatistica('11/12/2003', 322, 'detail'))
-fila_teste = filanormal()
-fila_teste.atualiza_fila()
-fila_teste.atualiza_fila()
-print(fila_teste.chama_cliente(5))
-print(fila_teste.chama_cliente(10))
 
-
+teste_fabrica = Fabrica_Fila.pega_fila('prioritaria')
+teste_fabrica.atualiza_fila()
+teste_fabrica.atualiza_fila()
+teste_fabrica.atualiza_fila()
+print(teste_fabrica.chama_cliente(5))
+print(teste_fabrica.estatistica( EstatisticaDetalhada('11/10/2020', 120,)))
 
 
 

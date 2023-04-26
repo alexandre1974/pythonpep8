@@ -1,9 +1,10 @@
-from  fila_base import FilaBase
+from fila_base import FilaBase
+from constantes import CODIGO_NORMAL
 
 class filanormal(FilaBase):
 
     def gera_senha_atual(self) -> None:
-        self.senhaatual = f'NM {self.codigo}'
+        self.senhaatual = f'{CODIGO_NORMAL} {self.codigo}'
 
     def atualiza_fila(self)->None:
         self.reseta_senha()
